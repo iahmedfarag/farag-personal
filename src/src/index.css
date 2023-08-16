@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-red: #a7233a;
+  --color-red-dark: #962034;
+  --color-red-darker: #861c2e;
+  --color-white: #fff;
+  --color-white-dark: #f2f2f2;
+  --color-black: #000;
+  --color-black-4: #444;
+  --color-grey: #eee;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--color-white-dark);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+/* container */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+/* @media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+} */
+/* @media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+} */
+.main-btn {
+  display: block;
+  width: fit-content;
+  padding: 10px 25px;
+  font-size: 18px;
+  border: 1px solid var(--color-red);
+  position: relative;
+}
+.main-btn p {
+  position: relative;
+  z-index: 3;
+}
+.main-btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0px;
+  background-color: var(--color-red);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.main-btn:hover {
+  color: var(--color-white);
+}
+.main-btn:hover span {
+  width: 100%;
+}
