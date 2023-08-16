@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import icon from "../assets/images/logo/favicon3.ico";
 import { navLinks } from "../data.js";
 import { Link } from "react-router-dom";
-import cv from "../assets/ahmed_farag_mern_stack_developer_cv.pdf";
+import cv from "../assets/ahmed_farag_mern_stack_dev.pdf";
 const Navbar = () => {
   return (
     <Wrapper>

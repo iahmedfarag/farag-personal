@@ -6,7 +6,7 @@ import AOS from "aos";
 import DownArror from "./DownArror.jsx";
 import UpArrow from "./UpArrow.jsx";
 import { Link } from "react-router-dom";
-import cv from "../assets/ahmed_farag_mern_stack_developer_cv.pdf";
+import cv from "../assets/ahmed_farag_mern_stack_dev.pdf";
 
 const Hero = () => {
   let hi = "h i ,";
