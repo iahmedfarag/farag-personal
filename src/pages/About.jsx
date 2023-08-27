@@ -70,6 +70,7 @@ const About = () => {
                 <li>React</li>
                 <li>Redux</li>
                 <li>React-Styled-Components</li>
+                <li>Typescript</li>
                 <li>Nodejs</li>
                 <li>Express</li>
                 <li>Mongo DB</li>

@@ -1,4 +1,3 @@
-import React from "react";
 import { styled } from "styled-components";
 import icon from "../assets/images/logo/favicon3.ico";
 import { navLinks } from "../data.js";
