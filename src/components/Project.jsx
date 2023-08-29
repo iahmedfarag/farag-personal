@@ -27,7 +27,7 @@ const Project = ({ id, thumbnail, title, short_description, urls, category, done
       <div className="info">
         <h3>
           {
-            done ? <Link to={`/${category}/${id}`}>{title}</Link> : { title }
+            done ? <Link to={`/${category}/${id}`}>{title}</Link> : title
           }
         </h3>
         <p>{short_description}</p>
