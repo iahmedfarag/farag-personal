@@ -32,27 +32,13 @@ const About = () => {
           <header>
             <img src={img} alt="farag" />
             <p>
-              Im a front-end developer with more than a year of self-study
-              experience. I’m passionate about building user-friendly and
-              visually appealing websites and applications.
+              I'm Ahmed, a Mern Stack developer. I’m passionate about building user-friendly and visually appealing websites and applications.
             </p>
           </header>
 
           <div className="content">
             <p>
-              I am currently enrolled in a full-stack diploma program at{" "}
-              <Link
-                to={
-                  "https://www.linkedin.com/company/routeacademy/?originalSubdomain=eg"
-                }
-              >
-                Route Academy
-              </Link>
-              . I am a highly motivated and self-directed learner with a strong
-              passion for web development. I am always looking for new
-              challenges and opportunities to learn and grow. I am confident
-              that I have the skills and experience to be a valuable asset to
-              any team.
+              I have built big projects, such as a jobs platform and an e-commerce store. I am passionate about learning new technologies and using them to create innovative solutions. I am also a team player and I enjoy working with others to achieve common goals.
             </p>
           </div>
 
@@ -97,6 +83,11 @@ const About = () => {
                   >
                     React-Styled-Components Course
                   </Link>
+                </li>
+                <li>
+
+                  Front-End Diploma in Route Academy IT Center
+
                 </li>
               </ul>
             </div>
@@ -169,11 +160,16 @@ const Wrapper = styled.main`
 
           &.cert {
             ul {
+              display: flex;
+              flex-direction: column;
               li {
                 width: 100%;
+                border: 1px solid #999;
+                width: fit-content;
+                padding: 10px;
                 a {
                   color: #02029b;
-                  border-bottom: 1px solid blue;
+                  /* border-bottom: 1px solid blue; */
                   &:hover {
                     opacity: 0.7;
                   }
