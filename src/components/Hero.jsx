@@ -12,7 +12,7 @@ const Hero = () => {
   let hi = "h i ,";
   let im = "i ' m  . f a r a g , ";
   //   let web = "w e b . d e v e l o p e r ";
-  let dev = "f u l l . s t a c k . . d e v e l o p e r";
+  let dev = "m e r n . s t a c k . . d e v e l o p e r";
 
   let isScrolled = false;
   return (
