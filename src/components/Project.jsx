@@ -5,27 +5,23 @@ import { AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { BsFillShareFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import AOS from "aos";
-const Project = ({
-  id,
-  thumbnail,
-  title,
-  short_description,
-  urls,
-  category,
-}) => {
-  AOS.init();
+const Project = ({ id, thumbnail, title, short_description, urls, category, done }) => {
 
+  AOS.init();
   return (
     <Wrapper key={id} data-aos="fade-left">
+
       <div className="img">
         <img src={thumbnail} alt="project" />
-        <div className="overlay">
-          <div>
-            <Link to={`/${category}/${id}`}>
-              <AiOutlineSearch />
-            </Link>
+        {
+          done && <div className="overlay">
+            <div>
+              <Link to={`/${category}/${id}`}>
+                <AiOutlineSearch />
+              </Link>
+            </div>
           </div>
-        </div>
+        }
       </div>
 
       <div className="info">
@@ -34,18 +30,29 @@ const Project = ({
         </h3>
         <p>{short_description}</p>
         <div>
-          <Link to={`/${category}/${id}`} className="more-btn">
-            More Details
-          </Link>
-          <Link to={urls.git} target="_blank">
-            <AiFillGithub />
-          </Link>
-          <Link to={urls.demo} target="_blank">
-            <BsFillShareFill />
-          </Link>
+          {
+            done && <Link to={`/${category}/${id}`} className="more-btn">
+              More Details
+            </Link>
+          }
+
+
+          {
+            !done && <Link to={urls.git} target="_blank">
+              <AiFillGithub />
+            </Link>
+          }
+          {
+            done && <Link to={urls.demo} target="_blank">
+              <BsFillShareFill />
+            </Link>
+          }
+
+
         </div>
       </div>
-    </Wrapper>
+
+    </Wrapper >
   );
 };
 const Wrapper = styled.article`

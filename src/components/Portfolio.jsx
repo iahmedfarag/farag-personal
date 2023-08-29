@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { styled } from "styled-components";
 import { portfolio as projects } from "../data.js";
 import {
-  BsArrowRight,
-  BsArrowLeft,
   BsArrowDown,
   BsArrowUp,
 } from "react-icons/bs";
@@ -30,8 +28,9 @@ const Portfolio = ({ showExtra }) => {
         </h2>
         <div className="wrapper">
           <div className="projects">
+
             {projects.projects.map((project) => {
-              const { id, thumbnail, title, short_description, urls } = project;
+              const { id, thumbnail, title, short_description, urls, done } = project;
               return (
                 <Project
                   key={id}
@@ -41,9 +40,11 @@ const Portfolio = ({ showExtra }) => {
                   short_description={short_description}
                   urls={urls}
                   category={"projects"}
+                  done={done}
                 />
               );
             })}
+
           </div>
           {showExtra && (
             <button

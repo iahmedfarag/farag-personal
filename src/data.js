@@ -30,7 +30,7 @@ import {
   desthumb,
   des1,
 } from "./assets/images";
-
+import fogthumb from "./assets/images/portfolio/fog/fogthumb.png"
 export const navLinks = [
   { id: nanoid(), text: "About", url: "/about" },
   { id: nanoid(), text: "Portfolio", url: "/portfolio" },
@@ -42,6 +42,26 @@ export const portfolio = {
   // main projects
   projects: [
     // newest first
+    // fog ---
+    {
+      id: "p00",
+      thumbnail: fogthumb,
+      images: [time1, time2, time3, time4],
+      title: "fog e-commerce",
+      short_description:
+        "building it using MERN, and TYPESCRIPT. working on it you can check github repo i update it daily",
+      description:
+        "",
+      features: [
+      ],
+      skills: [
+      ],
+      urls: {
+        demo: "https://timezonee.netlify.app/",
+        git: "https://github.com/iahmedfarag/fog-ecommerce-frontend",
+      },
+      done: false
+    },
     // time-zone
     {
       id: "p1",
@@ -73,6 +93,7 @@ export const portfolio = {
         demo: "https://timezonee.netlify.app/",
         git: "https://github.com/iahmedfarag/TimeZone",
       },
+      done: true
     },
     // job-hunter
     {
@@ -105,6 +126,7 @@ export const portfolio = {
         demo: "https://jobhunteer.netlify.app/",
         git: "https://github.com/iahmedfarag/jobHunter",
       },
+      done: true
     },
     // athath
     {
@@ -131,6 +153,7 @@ export const portfolio = {
         demo: "https://athathe.netlify.app/",
         git: "https://github.com/iahmedfarag/Athath",
       },
+      done: true
     },
     // designer
     {
@@ -153,6 +176,7 @@ export const portfolio = {
         demo: "https://designerprofile.netlify.app/",
         git: "https://github.com/iahmedfarag/designer-website",
       },
+      done: true
     },
   ],
   // extra projects
@@ -181,6 +205,7 @@ export const portfolio = {
         demo: "https://color-gener.netlify.app/",
         git: "https://github.com/iahmedfarag/color-generator",
       },
+      done: true
     },
     // trainer
     {
@@ -205,6 +230,7 @@ export const portfolio = {
         demo: "https://trainerr.netlify.app/",
         git: "https://github.com/iahmedfarag/gym-trainer",
       },
+      done: true
     },
     // photo-editor
     {
@@ -229,6 +255,7 @@ export const portfolio = {
         demo: "https://photoeditorr.netlify.app/",
         git: "https://github.com/iahmedfarag/photo-editor",
       },
+      done: true
     },
   ],
 };
