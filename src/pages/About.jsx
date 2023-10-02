@@ -1,9 +1,91 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useAppContext } from "../context.jsx";
 import { styled } from "styled-components";
 import img from "../assets/images/farag.png";
 import { Link } from "react-router-dom";
 import { Loading, LetterElement } from "../components";
+import { nanoid } from "nanoid";
+import html from "../assets/images/skills/html.svg"
+import css from "../assets/images/skills/css.svg"
+import js from "../assets/images/skills/js.svg"
+import bootstrap from "../assets/images/skills/bootstrap.svg"
+import github from "../assets/images/skills/github.svg"
+import react from "../assets/images/skills/react.svg"
+import reactStyled from "../assets/images/skills/react-styled-components.png"
+import redux from "../assets/images/skills/redux.svg"
+import reactQuery from "../assets/images/skills/react-query.svg"
+import ts from "../assets/images/skills/ts.svg"
+import nodejs from "../assets/images/skills/nodejs.svg"
+import express from "../assets/images/skills/express.svg"
+import mongodb from "../assets/images/skills/mongodb.svg"
+const skills = [
+  {
+    name: 'HTML',
+    img: html,
+    id: nanoid(),
+  },
+  {
+    name: 'CSS',
+    img: css,
+    id: nanoid(),
+  },
+  {
+    name: 'Javascript',
+    img: js,
+    id: nanoid(),
+  },
+  {
+    name: 'Bootstrap',
+    img: bootstrap,
+    id: nanoid(),
+  },
+  {
+    name: 'Git & Github',
+    img: github,
+    id: nanoid(),
+  },
+  {
+    name: 'React',
+    img: react,
+    id: nanoid(),
+  },
+  {
+    name: 'React-Styled-Components',
+    img: reactStyled,
+    id: nanoid(),
+  },
+  {
+    name: 'Redux',
+    img: redux,
+    id: nanoid(),
+  },
+  {
+    name: 'React-Query',
+    img: reactQuery,
+    id: nanoid(),
+  },
+  {
+    name: 'Typescript',
+    img: ts,
+    id: nanoid(),
+  },
+  {
+    name: 'Nodejs',
+    img: nodejs,
+    id: nanoid(),
+  },
+  {
+    name: 'Express',
+    img: express,
+    id: nanoid(),
+  },
+  {
+    name: 'MongoDB',
+    img: mongodb,
+    id: nanoid(),
+  },
+]
+
 const About = () => {
   const { isLoading, setIsLoading } = useAppContext();
   let title = "A b o u t . . A h m e d . . F a r ag";
@@ -46,20 +128,14 @@ const About = () => {
             <div className="skills">
               <h2>Skills</h2>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-                <li>JavaScript</li>
-                <li>SAAS</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>React-Styled-Components</li>
-                <li>Typescript</li>
-                <li>Nodejs</li>
-                <li>Express</li>
-                <li>Mongo DB</li>
+                {
+                  skills.map((skill) => {
+                    return <li key={skill.id}>
+                      <img src={skill.img} alt="skill-logo" />
+                      <p>{skill.name}</p>
+                    </li>
+                  })
+                }
               </ul>
             </div>
 
@@ -139,12 +215,12 @@ const Wrapper = styled.main`
             margin-bottom: 25px;
           }
           h2 {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
           }
           ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
             li {
               font-size: 18px;
             }
@@ -153,7 +229,13 @@ const Wrapper = styled.main`
           &.skills {
             ul {
               li {
-                width: calc(50% - 15px / 2);
+                width: calc(( 100% / 3 ) - (40px / 3));
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                img {
+                  width: 20px;
+                }
               }
             }
           }
@@ -181,7 +263,27 @@ const Wrapper = styled.main`
       }
     }
   }
-  @media (max-width: 576px) {
+
+  @media(max-width: 768px) {
+      .container {
+        .wrapper {
+          .sum {
+            div {
+              &.skills {
+                ul {
+                  li {
+                    width: calc(( 100% / 2 ) - (20px / 2));
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+
+  @media (max-width: 768px) {
     /* padding: 30px 0; */
     padding-left: 10px;
     padding-right: 10px;
